@@ -1,3 +1,6 @@
+import os
 import streamlit as st
 
-st.title('Streamlit example')
+os.environ.get('TITLE', None)
+
+st.title('Testing title {title}')
