@@ -34,4 +34,4 @@ RUN poetry check
 RUN poetry install --no-interaction --no-cache
 EXPOSE 8501
 
-ENTRYPOINT ["poetry", "run", "streamlit", "run", "docker_streamlit/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["poetry", "run", "streamlit", "run", "docker_streamlit/main.py", "--server.port=$PORT", "--server.address=0.0.0.0"]
