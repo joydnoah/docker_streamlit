@@ -32,6 +32,6 @@ COPY poetry.lock pyproject.toml ./
 RUN poetry check
 
 RUN poetry install --no-interaction --no-cache
-EXPOSE 8501
+EXPOSE $PORT
 
 ENTRYPOINT ["poetry", "run", "streamlit", "run", "docker_streamlit/main.py", "--server.port=$PORT", "--server.address=0.0.0.0"]
